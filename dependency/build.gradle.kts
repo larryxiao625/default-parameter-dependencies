@@ -4,8 +4,9 @@ plugins {
     id("maven-publish")
 }
 
+println("Get version name of: ${System.getenv("GITHUB_REF_NAME")}")
 group = "org.example.larryxiao625"
-version = System.getenv("GITHUB_REF") ?: "v0.0.5"
+version = System.getenv("GITHUB_REF_NAME") ?: "v0.0.5"
 
 repositories {
     mavenCentral()
