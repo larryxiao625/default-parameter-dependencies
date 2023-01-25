@@ -4,8 +4,8 @@ plugins {
     id("maven-publish")
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+group = "org.example.larryxiao625"
+version = "v0.0.1"
 
 repositories {
     mavenCentral()
@@ -21,6 +21,20 @@ tasks.getByName<Test>("test") {
 }
 
 publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+            artifactId = "default-parameter-dependency"
+            from(components["java"])
+            versionMapping {
+                usage("java-api") {
+                    fromResolutionOf("runtimeClasspath")
+                }
+                usage("java-runtime") {
+                    fromResolutionResult()
+                }
+            }
+        }
+    }
     repositories {
         maven {
             name = "GitHubPackages"
