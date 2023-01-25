@@ -1,6 +1,6 @@
 package org.example
 
-class DefaultParameter {
+open class DefaultParameter {
     fun defaultParameterTest(
         normal: String,
         defaultParameter0: String? = null,
