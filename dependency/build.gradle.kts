@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "org.example.larryxiao625"
-version = "v0.0.2"
+version = System.getenv("GITHUB_REF") ?: "v0.0.5"
 
 repositories {
     mavenCentral()
