@@ -1,0 +1,6 @@
+class DefaultParameterInvoke {
+
+    fun invokeDefaultParameter() {
+
+    }
+}
