@@ -18,6 +18,14 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           arguments: clean source:compileKotlin -i
+      - name: Build package With 0.0.7 version
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: clean source:compileKotlin -i
+      - name: Build package With 0.0.8 version
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: source:compileKotlin -i
       - name: Upload 0.0.7 artifact
         uses: actions/upload-artifact@v3
         with:
