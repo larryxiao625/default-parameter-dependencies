@@ -25,7 +25,7 @@ jobs:
           path: source/build/classes/kotlin/main/org/example/DefaultParameterInvoke.class
       - name: Sed with 0.0.8 version
         run: |
-          sed -i 's/0.0.7/0.0.8/g' ./source/build.gradle.kts
+          sed -i "" 's/0.0.7/0.0.8/g' source/build.gradle.kts
       - name: Build package With 0.0.8 version
         uses: gradle/gradle-build-action@v2
         with:
