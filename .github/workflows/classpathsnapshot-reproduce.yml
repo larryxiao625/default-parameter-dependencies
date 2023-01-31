@@ -1,7 +1,5 @@
 name: Reproduce classpath snapshot issue
-on:
-  release:
-    types: [created]
+on: push
 jobs:
   publish:
     runs-on: ubuntu-latest
