@@ -1,11 +1,12 @@
 package org.example
 
 abstract class DefaultParameter {
-    fun defaultParameterTest(
-        normal: String,
+    fun <T> defaultParameterTest(
+        normal: T,
         defaultParameter1: String = "",
-        defaultParameter2: Any? = null,
-        defaultParameter4: Any? = null
+        defaultParameter2: ((Throwable) -> Unit)? = null,
+        defaultParameter3: (() -> Unit)? = null,
+        defaultParameter4: ((T) -> Unit)? = null
     ) {
 
     }
