@@ -1,8 +1,9 @@
 package org.example
 
-class DefaultParameterInvoke {
+object DefaultParameterInvoke : DefaultParameterInvokeInterface {
 
+    private val impl by delegation()
     fun invokeDefaultParameter() {
-        DefaultParameterImpl().defaultParameterTest("aaaa", defaultParameter1 = "aaaaa")
+        impl.defaultParameterTest("aaaa", defaultParameter1 = "aaaaa")
     }
 }
