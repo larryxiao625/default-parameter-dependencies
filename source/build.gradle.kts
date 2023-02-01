@@ -6,7 +6,7 @@ plugins {
 dependencies {
     testImplementation(kotlin("test"))
     implementation(project(":subsource"))
-    implementation(files(rootProject.file("libs/default-parameter-dependency-v0.0.8.jar")))
+    implementation(files(rootProject.file("libs/default-parameter-dependency-v0.0.9.jar")))
 }
 
 tasks.test {
