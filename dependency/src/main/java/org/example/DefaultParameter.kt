@@ -5,7 +5,6 @@ abstract class DefaultParameter {
         normal: String,
         defaultParameter1: String = "",
         defaultParameter2: Any? = null,
-        defaultParameter3: Any? = null,
         defaultParameter4: Any? = null
     ) {
 
